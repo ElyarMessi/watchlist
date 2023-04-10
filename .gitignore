@@ -133,3 +133,6 @@ dmypy.json
 
 # vscode folder
 .vscode/
+
+# database
+*.db
