@@ -131,7 +131,7 @@ def login():
         user = User.query.first()
         if username==user.username and user.validate_password(password):
             login_user(user)
-            flash('Login Seccess.')
+            flash('Login success.')
             return redirect(url_for('index'))
         
         flash('Invalid username or password.')
@@ -214,7 +214,7 @@ def index():
         movie = Movie(title=title, year=year)
         db.session.add(movie)
         db.session.commit()
-        flash('Item Created.')
+        flash('Item created.')
         return redirect(url_for('index'))
     
     movies = Movie.query.all()
